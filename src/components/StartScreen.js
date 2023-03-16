@@ -1,5 +1,6 @@
 import "./StartScreen.css"
 const StartScreen = ({start}) => {
+  
   return (
     <div className="Start">
         <h1>Secret Word</h1>

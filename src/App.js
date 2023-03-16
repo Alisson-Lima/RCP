@@ -23,7 +23,7 @@ function App() {
   // Variables
 
   const guessesQTD = 3
-  const [gameStage, setGameStage] = useState(stages[0].name)
+  const [gameStage, setGameStage] = useState("start")
   const [words] = useState(wordsList)
   const [pickedWord, setPickedWord] = useState()
   const [pickedTheme, setPickedTheme] = useState()
@@ -118,7 +118,6 @@ function App() {
 
   return (
     <div className="App">
-
     {gameStage === "start" && <StartScreen start={startGame}/>}
     {gameStage === "game" && <GameScreen
       verifyLetter={verifyLetter}
@@ -130,7 +129,7 @@ function App() {
       guesses={guesses}
       score={score}
     />}
-    {gameStage === "end" && <EndScreen restart={restartGame} score={score}/>}
+    {gameStage === "end" && <EndScreen restart={restartGame} score={score} lastWord={pickedWord}/>}
     </div>
   );
 }
