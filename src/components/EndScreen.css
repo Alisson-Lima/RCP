@@ -1,0 +1,7 @@
+.reset-button{
+    background: rgb(201, 66, 66);
+}
+
+.reset-button:hover{
+    background: rgb(231, 66, 66);
+}
